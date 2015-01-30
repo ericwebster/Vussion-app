@@ -46,16 +46,20 @@
       Vussion.debugLog('init');
       merge(Vussion.settings, settings);
 
-      $.ajax({
-        dataType: "json",
-        url: "../../../data/script.json",
-        success: function(res){
-          Vussion.debugLog('presentation script loaded');
-          Vussion.data = res;
-        }
-      });
+      console.log(Vussion.settings)
 
-      Vussion.socket = io("http://192.168.1.2:3000");
+      Vussion.data = ExternalData;
+      if(window.localStorage.getItem('settings')){
+        Vussion.debugLog("found local settings");
+        Vussion.getSettingsFromLocalStorage();
+      } else {
+        Vussion.debugLog("no local settings");
+      }
+
+      Vussion.debugLog(Vussion.settings.server + ":" + Vussion.settings.port );
+
+      Vussion.socket = io(Vussion.settings.server + ":" + Vussion.settings.port);
+      
       Vussion.bindEvents();
     },
     bindEvents: function(){
@@ -88,6 +92,14 @@
           }
         }); 
       })
+
+      $("#settings-form").submit(function(){
+        Vussion.debugLog("bind form");
+        Vussion.settings.server = $("#serverAddress").val();
+        Vussion.settings.port = $("#serverPort").val();
+        Vussion.writeSettingsToLocalStorage();
+        return false;
+      })
       
     },
     playVideo: function(){
@@ -98,14 +110,25 @@
       Vussion.debugLog("change slide");
       Vussion.presentation.slickGoTo(num);
     },
+    writeSettingsToLocalStorage: function(){
+      Vussion.debugLog("write to local storage");
+      window.localStorage.setItem('settings', JSON.stringify(Vussion.settings));
+    },
+    getSettingsFromLocalStorage: function(){
+      Vussion.debugLog("read from local storage");
+      Vussion.settings = $.parseJSON(window.localStorage.getItem('settings'));
+    },
     debugLog: function(message){
       console.log(message);
       $('#debugger ul').append($('<li>').text(message));
     },
     compileTemplate: function(templateID, data){
+      console.log(templateID);
+      console.log(data)
       var source   = $(templateID).html();
       var template = Handlebars.compile(source);
       var markup = template(data);
+      console.log(markup);
       return markup;
     },
     changeSection: function(section){
@@ -136,7 +159,10 @@
           var html = Vussion.compileTemplate("#video-template", section);
           $(sectionEl).html(html).promise().done(function(){
             $("section#" + section.type).addClass("active");
-            Vussion.vidplayer = videojs("#player" + section.id);
+            Vussion.vidplayer = videojs("#player" + section.id, {
+              "controls": true,
+              "poster": "http://www.placehold.it/1280x720.jpg"
+            });
             console.log(Vussion.vidplayer);
           })
           break;

@@ -25,15 +25,18 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <title>Vussion</title>
+
+        <script src="data/script.json.js"></script>
         <script src="_assets/js/all.js"></script>
         <link rel="stylesheet" href="_assets/css/bootstrap.css">
         <link rel="stylesheet" href="_assets/css/slick.css">
         <link rel="stylesheet" href="_assets/css/style.css">    
         <link rel="stylesheet" href="_assets/css/video-js.min.css">
+
     </head>
     <body>
         
-
+    
     <script src="_assets/js/view.js"></script>
 
     <script>
@@ -83,7 +86,7 @@
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="settings">
                 <h4>Settings</h4>
-                <form action="">
+                <form action="#" id="settings-form">
                   <div class="form-group">
                     <label for="serverAddress">Server Address</label>
                     <input type="text" class="form-control" id="serverAddress" placeholder="http://localhost">
@@ -108,7 +111,7 @@
   </div><!-- /.modal -->
 
 <script id="slide-template" type="text/x-handlebars-template">
-  <div id="slick-slider">
+  <div id="slick-slider\{{id}}">
   \{{#each slides}}
     <div><img src="\{{media}}/960x600"><h3>\{{caption}}</h3></div>
   \{{/each}}
@@ -151,9 +154,7 @@
 </script>
 
 <script id="video-template" type="text/x-handlebars-template">
-  <video id="player\{{id}}" class="video-js vjs-default-skin"
-      controls preload="auto" width="1280" height="720"
-      data-setup='{"example_option":true, "controls": false}'>
+  <video id="player\{{id}}" class="video-js vjs-default-skin" width="1280" height="720">
   </video>
 </script>
 

@@ -1,4 +1,4 @@
-Vussion.data = {
+ExternalData = {
 	"client": "Athena Health",
 	"sections":[{
 		"name": "Loading Screen",

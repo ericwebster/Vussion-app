@@ -139,3 +139,101 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 
 2015-01-29 22:22:59.825 Vussion[2575:26801] Resetting plugins due to page load.
 2015-01-29 22:23:00.152 Vussion[2575:26801] Finished load of: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/89A47531-A597-4FA3-9FF8-1419D7422872/data/Containers/Bundle/Application/1ECE735C-C1AE-40AC-A548-0DD68AA7C784/Vussion.app/www/index.html
+2015-01-29 22:39:43.964 Vussion[2789:31471] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/89A47531-A597-4FA3-9FF8-1419D7422872/data/Containers/Data/Application/D417915E-429B-48A2-AF07-78BE195A319F/Library/Cookies/Cookies.binarycookies
+2015-01-29 22:39:44.105 Vussion[2789:31471] Apache Cordova native platform version 3.7.0 is starting.
+2015-01-29 22:39:44.105 Vussion[2789:31471] Multi-tasking -> Device: YES, App: YES
+2015-01-29 22:39:44.107 Vussion[2789:31471] Unlimited access to network resources
+2015-01-29 22:39:44.109 Vussion[2789:31471] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-01-29 22:39:44.356 Vussion[2789:31471] Resetting plugins due to page load.
+2015-01-29 22:39:44.532 Vussion[2789:31471] Finished load of: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/89A47531-A597-4FA3-9FF8-1419D7422872/data/Containers/Bundle/Application/018E866B-803D-464B-95DD-D87E1B2CDB66/Vussion.app/www/index.html
+2015-01-30 11:19:04.192 Vussion[3051:39578] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/89A47531-A597-4FA3-9FF8-1419D7422872/data/Containers/Data/Application/30FDCF54-7792-4DC5-908B-73C6A2C5B507/Library/Cookies/Cookies.binarycookies
+2015-01-30 11:19:04.316 Vussion[3051:39578] Apache Cordova native platform version 3.7.0 is starting.
+2015-01-30 11:19:04.317 Vussion[3051:39578] Multi-tasking -> Device: YES, App: YES
+2015-01-30 11:19:04.318 Vussion[3051:39578] Unlimited access to network resources
+2015-01-30 11:19:04.321 Vussion[3051:39578] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-01-30 11:19:04.610 Vussion[3051:39578] Resetting plugins due to page load.
+2015-01-30 11:19:04.815 Vussion[3051:39578] Finished load of: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/89A47531-A597-4FA3-9FF8-1419D7422872/data/Containers/Bundle/Application/9E9C1112-8147-459A-B5A1-E697AFC8EBBC/Vussion.app/www/index.html
+2015-01-30 11:24:08.056 Vussion[3250:42400] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/89A47531-A597-4FA3-9FF8-1419D7422872/data/Containers/Data/Application/82E76B39-F9F0-49ED-ABE8-8C76593BD549/Library/Cookies/Cookies.binarycookies
+2015-01-30 11:24:08.224 Vussion[3250:42400] Apache Cordova native platform version 3.7.0 is starting.
+2015-01-30 11:24:08.224 Vussion[3250:42400] Multi-tasking -> Device: YES, App: YES
+2015-01-30 11:24:08.226 Vussion[3250:42400] Unlimited access to network resources
+2015-01-30 11:24:08.228 Vussion[3250:42400] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-01-30 11:24:08.476 Vussion[3250:42400] Resetting plugins due to page load.
+2015-01-30 11:24:08.654 Vussion[3250:42400] Finished load of: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/89A47531-A597-4FA3-9FF8-1419D7422872/data/Containers/Bundle/Application/F2C75F45-9ABB-44CD-A091-D74B250CB3D1/Vussion.app/www/index.html
+2015-01-30 11:24:32.216 Vussion[3389:43138] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/185E011F-5E30-4AB7-AE05-F2408B9C038B/data/Containers/Data/Application/99833CC3-2491-4159-B416-14E1C1884E1A/Library/Cookies/Cookies.binarycookies
+2015-01-30 11:24:32.378 Vussion[3389:43138] Apache Cordova native platform version 3.7.0 is starting.
+2015-01-30 11:24:32.378 Vussion[3389:43138] Multi-tasking -> Device: YES, App: YES
+2015-01-30 11:24:32.434 Vussion[3389:43138] Unlimited access to network resources
+2015-01-30 11:24:32.443 Vussion[3389:43138] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-01-30 11:24:33.805 Vussion[3389:43138] Resetting plugins due to page load.
+2015-01-30 11:24:34.044 Vussion[3389:43138] Finished load of: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/185E011F-5E30-4AB7-AE05-F2408B9C038B/data/Containers/Bundle/Application/C10C3873-E512-47F4-B853-37CB3FF30DB0/Vussion.app/www/index.html
+2015-01-30 16:57:37.946 Vussion[5780:97447] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/185E011F-5E30-4AB7-AE05-F2408B9C038B/data/Containers/Data/Application/2F6C67F2-12AE-4A39-B56E-9A7E7C60D731/Library/Cookies/Cookies.binarycookies
+2015-01-30 16:57:38.093 Vussion[5780:97447] Apache Cordova native platform version 3.7.0 is starting.
+2015-01-30 16:57:38.094 Vussion[5780:97447] Multi-tasking -> Device: YES, App: YES
+2015-01-30 16:57:38.106 Vussion[5780:97447] Unlimited access to network resources
+2015-01-30 16:57:38.114 Vussion[5780:97447] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-01-30 16:57:38.634 Vussion[5780:97447] Resetting plugins due to page load.
+2015-01-30 16:57:38.891 Vussion[5780:97447] Finished load of: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/185E011F-5E30-4AB7-AE05-F2408B9C038B/data/Containers/Bundle/Application/A2B9439C-1647-49BE-A9BE-3E32A24A3C33/Vussion.app/www/index.html
+2015-01-30 16:58:33.475 Vussion[5936:98770] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/89A47531-A597-4FA3-9FF8-1419D7422872/data/Containers/Data/Application/63C54E0C-033D-497E-80B4-F2580EF236D7/Library/Cookies/Cookies.binarycookies
+2015-01-30 16:58:33.576 Vussion[5936:98770] Apache Cordova native platform version 3.7.0 is starting.
+2015-01-30 16:58:33.576 Vussion[5936:98770] Multi-tasking -> Device: YES, App: YES
+2015-01-30 16:58:33.577 Vussion[5936:98770] Unlimited access to network resources
+2015-01-30 16:58:33.586 Vussion[5936:98770] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-01-30 16:58:33.836 Vussion[5936:98770] Resetting plugins due to page load.
+2015-01-30 16:58:34.021 Vussion[5936:98770] Finished load of: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/89A47531-A597-4FA3-9FF8-1419D7422872/data/Containers/Bundle/Application/94323766-38AA-487C-8849-09DF4BF4A8FC/Vussion.app/www/index.html
+2015-01-30 16:59:23.055 Vussion[6053:99467] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/89A47531-A597-4FA3-9FF8-1419D7422872/data/Containers/Data/Application/8C8789A8-D7B9-4B79-A1B5-428A331A5490/Library/Cookies/Cookies.binarycookies
+2015-01-30 16:59:23.168 Vussion[6053:99467] Apache Cordova native platform version 3.7.0 is starting.
+2015-01-30 16:59:23.168 Vussion[6053:99467] Multi-tasking -> Device: YES, App: YES
+2015-01-30 16:59:23.170 Vussion[6053:99467] Unlimited access to network resources
+2015-01-30 16:59:23.183 Vussion[6053:99467] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-01-30 16:59:23.593 Vussion[6053:99467] Resetting plugins due to page load.
+2015-01-30 16:59:23.800 Vussion[6053:99467] Finished load of: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/89A47531-A597-4FA3-9FF8-1419D7422872/data/Containers/Bundle/Application/EAB0AC11-C2C5-4957-B2DA-3EA977E54536/Vussion.app/www/index.html

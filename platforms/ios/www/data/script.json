@@ -1,4 +1,4 @@
-{
+Vussion.data = {
 	"client": "Athena Health",
 	"sections":[{
 		"name": "Loading Screen",
@@ -80,4 +80,4 @@
 		"type": "HTML",
 		"HTML":"<p>Thank You</p>"
 	}]
-}
+};

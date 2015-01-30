@@ -1,0 +1,41 @@
+.slider-wrapper {
+  margin: 0 auto;
+  width: 100%; }
+
+header {
+  padding-bottom: 10px; }
+
+#menu-module {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  overflow: hidden;
+  z-index: 3000; }
+
+.view .container {
+  width: 2048px !important;
+  height: 1536px !important;
+  margin: 0 !important;
+  padding: 0 !important; }
+
+.view section {
+  width: 2048px !important;
+  height: 1536px !important;
+  background: #eee !important; }
+
+section {
+  display: none; }
+
+section#loading img{
+  padding: 0; 
+  margin: 350px 0 0 0;
+}
+
+section.active {
+  display: block !important; }
+
+.slick-slide {
+  position: relative;
+  display: block; }

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>Vussion</title>
+        <script src="_assets/js/all.js"></script>
+        <link rel="stylesheet" href="_assets/css/bootstrap.css">
+        <link rel="stylesheet" href="_assets/css/slick.css">
+        <link rel="stylesheet" href="_assets/css/style.css">    
+        <link rel="stylesheet" href="_assets/css/video-js.min.css">
+    </head>
+    <body>
+        
+
+    <script src="_assets/js/view.js"></script>
+
+    <script>
+    $(document).ready(function(){
+      Vussion.init();
+    })
+    </script>
+    
+    <div id="view">
+      <a id="menu-module" data-toggle="modal" data-target="#application-menu" class="btn btn-primary pull-right" >Menu</a>
+      <div>
+
+        <section id="loading" class="active">
+          <div class="col-md-12 text-center">
+              <img src="_assets/images/loading-icon.gif" />
+              <p>Please Hold</p>
+          </div>
+        </section>
+
+        <section id="slider" class="slider-wrapper">              
+        </section>
+
+        <section id="html" class="html-wrapper">
+        </section>
+
+        <section id="video" class="video-wrapper">
+        </section> 
+    </div>
+  </div>
+
+  <div id="application-menu" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Menu</h4>
+        </div>
+        <div class="modal-body">
+
+          <div role="tabpanel">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+              <li role="presentation"><a href="#debugger" aria-controls="debugger" role="tab" data-toggle="tab">Debugger</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="settings">
+                <h4>Settings</h4>
+                <form action="">
+                  <div class="form-group">
+                    <label for="serverAddress">Server Address</label>
+                    <input type="text" class="form-control" id="serverAddress" placeholder="http://localhost">
+                  </div>
+                  <div class="form-group">
+                    <label for="serverPort">Server Port</label>
+                    <input type="text" class="form-control" id="serverPort" placeholder="3000">
+                  </div>
+                  <button type="submit" class="btn btn-default">Save Changes</button>
+                </form>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="debugger">
+                <h4>Debugger</h4>
+                <ul>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+<script id="slide-template" type="text/x-handlebars-template">
+  <div id="slick-slider">
+  \{{#each slides}}
+    <div><img src="\{{media}}/960x600"><h3>\{{caption}}</h3></div>
+  \{{/each}}
+  </div>
+</script> 
+
+
+<script id="html-template-basic" type="text/x-handlebars-template">
+  \{{{HTML}}}
+</script>
+
+<script id="html-template-specific" type="text/x-handlebars-template">
+  <h1>HTML Ipsum Presents</h1>
+
+  <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+  <h2>Header Level 2</h2>
+           
+  <ol>
+     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+     <li>Aliquam tincidunt mauris eu risus.</li>
+  </ol>
+
+  <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+
+  <h3>Header Level 3</h3>
+
+  <ul>
+     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+     <li>Aliquam tincidunt mauris eu risus.</li>
+  </ul>
+
+  <pre><code>
+  #header h1 a { 
+    display: block; 
+    width: 300px; 
+    height: 80px; 
+  }
+  </code></pre>
+</script>
+
+<script id="video-template" type="text/x-handlebars-template">
+  <video id="player\{{id}}" class="video-js vjs-default-skin"
+      controls preload="auto" width="1280" height="720"
+      data-setup='{"example_option":true, "controls": false}'>
+  </video>
+</script>
+
+ 
+    </body>
+</html>

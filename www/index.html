@@ -111,16 +111,16 @@
   </div><!-- /.modal -->
 
 <script id="slide-template" type="text/x-handlebars-template">
-  <div id="slick-slider\{{id}}">
-  \{{#each slides}}
-    <div><img src="\{{media}}/960x600"><h3>\{{caption}}</h3></div>
-  \{{/each}}
+  <div id="slick-slider">
+  {{#each slides}}
+    <div><img src="{{media}}/960x600"><h3>{{caption}}</h3></div>
+  {{/each}}
   </div>
 </script> 
 
 
 <script id="html-template-basic" type="text/x-handlebars-template">
-  \{{{HTML}}}
+  {{{HTML}}}
 </script>
 
 <script id="html-template-specific" type="text/x-handlebars-template">
@@ -154,7 +154,7 @@
 </script>
 
 <script id="video-template" type="text/x-handlebars-template">
-  <video id="player\{{id}}" class="video-js vjs-default-skin" width="1280" height="720">
+  <video id="player{{id}}" class="video-js vjs-default-skin" width="1280" height="720">
   </video>
 </script>
 

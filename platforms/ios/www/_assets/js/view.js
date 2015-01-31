@@ -46,17 +46,14 @@
       Vussion.debugLog('init');
       merge(Vussion.settings, settings);
 
-      console.log(Vussion.settings)
-
       Vussion.data = ExternalData;
       if(window.localStorage.getItem('settings')){
         Vussion.debugLog("found local settings");
         Vussion.getSettingsFromLocalStorage();
+        Vussion.debugLog("connect to >> " + Vussion.settings.server + ":" + Vussion.settings.port);
       } else {
         Vussion.debugLog("no local settings");
       }
-
-      Vussion.debugLog(Vussion.settings.server + ":" + Vussion.settings.port );
 
       Vussion.socket = io(Vussion.settings.server + ":" + Vussion.settings.port);
       
@@ -64,21 +61,21 @@
     },
     bindEvents: function(){
       Vussion.socket.on('connect', function(){
-        Vussion.debugLog("socket.on connect");
+        Vussion.debugLog("socket.on >> connected captain");
 
         Vussion.socket.on('update', function(res){
-          Vussion.debugLog("socket.on update")
+          Vussion.debugLog("socket.on >> update")
 
           if(res.section.id != Vussion.state.current.section.id){
             //section has changed
-            Vussion.debugLog("section change");
+            Vussion.debugLog("socket.on >> section change");
             Vussion.state.current.section = res.section;
             Vussion.changeSection(res.section); 
           }
 
         });
 
-        Vussion.socket.on('change video', function(state){
+        Vussion.socket.on('socket.on >> change video', function(state){
           console.log(state.video);
           if(state.section.id != Vussion.state.current.section.id){
             Vussion.debugLog("emergency section change");
@@ -92,7 +89,13 @@
           }
         }); 
       })
-
+      Vussion.socket.on('error', function(err){
+        Vussion.debugLog("socket.on >> Oh-oh error on io.connect");
+        Vussion.debugLog("Settings >>");
+        Vussion.debugLog(Vussion.settings);
+        Vussion.debugLog("Err OBJ >>");
+        Vussion.debugLog(err);
+      })
       $("#settings-form").submit(function(){
         Vussion.debugLog("bind form");
         Vussion.settings.server = $("#serverAddress").val();
@@ -113,6 +116,7 @@
     writeSettingsToLocalStorage: function(){
       Vussion.debugLog("write to local storage");
       window.localStorage.setItem('settings', JSON.stringify(Vussion.settings));
+      window.reload();
     },
     getSettingsFromLocalStorage: function(){
       Vussion.debugLog("read from local storage");
@@ -123,8 +127,8 @@
       $('#debugger ul').append($('<li>').text(message));
     },
     compileTemplate: function(templateID, data){
-      console.log(templateID);
-      console.log(data)
+      console.log("Handlebars");
+      console.log(Handlebars);
       var source   = $(templateID).html();
       var template = Handlebars.compile(source);
       var markup = template(data);

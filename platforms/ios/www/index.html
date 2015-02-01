@@ -36,7 +36,6 @@
     </head>
     <body>
         
-    
     <script src="_assets/js/view.js"></script>
 
     <script>
@@ -45,7 +44,7 @@
     })
     </script>
     
-    <div id="view">
+    <div class="view">
       <a id="menu-module" data-toggle="modal" data-target="#application-menu" class="btn btn-primary pull-right" >Menu</a>
       <div>
 
@@ -113,7 +112,7 @@
 <script id="slide-template" type="text/x-handlebars-template">
   <div id="slick-slider">
   {{#each slides}}
-    <div><img src="{{media}}/960x600"><h3>{{caption}}</h3></div>
+    <div><img src="{{#assetPath}}{{media}}{{/assetPath}}"/></div>
   {{/each}}
   </div>
 </script> 

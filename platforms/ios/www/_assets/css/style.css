@@ -23,7 +23,7 @@ header {
 .view section {
   width: 2048px !important;
   height: 1536px !important;
-  background: #eee !important; }
+  background: #fff !important; }
 
 section {
   display: none; }

@@ -10,6 +10,8 @@
 	<string>Vussion</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>1E3FA68C88AF957DB852AE296C139807D99FC832</key>
+		<string>https://github.com/apache/cordova-js.git</string>
 		<key>1F0C96B64AC2A9FCAD229CD3E9A44BE1FA144477</key>
 		<string>https://github.com/ericwebster/Vussion-app.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>platforms/ios/Vussion.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>1E3FA68C88AF957DB852AE296C139807D99FC832</key>
+		<string>../../../..www/cordova-js/</string>
 		<key>1F0C96B64AC2A9FCAD229CD3E9A44BE1FA144477</key>
 		<string>../../../..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>1F0C96B64AC2A9FCAD229CD3E9A44BE1FA144477</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1E3FA68C88AF957DB852AE296C139807D99FC832</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cordova-js</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

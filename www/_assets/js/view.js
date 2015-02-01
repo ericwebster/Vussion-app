@@ -28,13 +28,14 @@
     }
     return target;
   }
-  
+
   //remote-presetaton
   var Vussion = {
     settings: {
       debug: true,
-      server: 'http://localhost',
-      port:'3000',
+      pathToAssets: '',
+      server: 'http://192.168.1.50',
+      port:'3000'
     },
     state:{
       current:{
@@ -56,7 +57,7 @@
       }
 
       Vussion.socket = io(Vussion.settings.server + ":" + Vussion.settings.port);
-      
+      Vussion.registerHandlebarHelpers();
       Vussion.bindEvents();
     },
     bindEvents: function(){
@@ -137,7 +138,7 @@
     },
     getSettingsFromLocalStorage: function(){
       Vussion.debugLog("read from local storage");
-      Vussion.settings = $.parseJSON(window.localStorage.getItem('settings'));
+      merge(Vussion.settings, $.parseJSON( window.localStorage.getItem('settings') ) );
     },
     debugLog: function(message){
       console.log(message);
@@ -147,8 +148,17 @@
       var source   = $(templateID).html();
       var template = Handlebars.compile(source);
       var markup = template(data);
-      console.log(markup);
       return markup;
+    },
+    registerHandlebarHelpers: function(){
+
+      Handlebars.registerHelper('assetPath', function(options) {
+        console.log(Vussion.settings)
+
+        var html = Vussion.settings.pathToAssets + options.fn(this);
+        return html;
+      });
+
     },
     changeSection: function(section){
       //requires Vussion.state.current.section to be updated

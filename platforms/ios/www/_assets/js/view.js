@@ -28,13 +28,14 @@
     }
     return target;
   }
-  
+
   //remote-presetaton
   var Vussion = {
     settings: {
       debug: true,
-      server: 'http://localhost',
-      port:'3000',
+      pathToAssets: '',
+      server: 'http://192.168.1.50',
+      port:'3000'
     },
     state:{
       current:{
@@ -56,13 +57,26 @@
       }
 
       Vussion.socket = io(Vussion.settings.server + ":" + Vussion.settings.port);
-      
+      Vussion.registerHandlebarHelpers();
       Vussion.bindEvents();
     },
     bindEvents: function(){
       Vussion.socket.on('connect', function(){
+
         Vussion.debugLog("socket.on >> connected captain");
 
+        //have the client machine request the current state of the presentation
+        Vussion.debugLog("socket.on >> requested state");
+        Vussion.socket.emit("request state");
+
+        //this should trigger a current state emit from the server
+        Vussion.socket.on('current state', function(state){
+          Vussion.debugLog("socket.on >> loading current state");
+          Vussion.state.current = state;
+          Vussion.changeSection(state.section); 
+        })
+
+        //this is the main section change update, possibly rename todo:
         Vussion.socket.on('update', function(res){
           Vussion.debugLog("socket.on >> update")
 
@@ -75,7 +89,7 @@
 
         });
 
-        Vussion.socket.on('socket.on >> change video', function(state){
+        Vussion.socket.on('change video', function(state){
           console.log(state.video);
           if(state.section.id != Vussion.state.current.section.id){
             Vussion.debugLog("emergency section change");
@@ -109,6 +123,10 @@
       Vussion.debugLog("change video file & play");
       Vussion.vidplayer.src(Vussion.state.current.video).play();
     },
+    getCurrentState: function(){
+      Vussion.debugLog("getting current state");
+      Vussion.socket.emit('request state');
+    },
     changeSlide: function(num){
       Vussion.debugLog("change slide");
       Vussion.presentation.slickGoTo(num);
@@ -120,20 +138,27 @@
     },
     getSettingsFromLocalStorage: function(){
       Vussion.debugLog("read from local storage");
-      Vussion.settings = $.parseJSON(window.localStorage.getItem('settings'));
+      merge(Vussion.settings, $.parseJSON( window.localStorage.getItem('settings') ) );
     },
     debugLog: function(message){
       console.log(message);
       $('#debugger ul').append($('<li>').text(message));
     },
     compileTemplate: function(templateID, data){
-      console.log("Handlebars");
-      console.log(Handlebars);
       var source   = $(templateID).html();
       var template = Handlebars.compile(source);
       var markup = template(data);
-      console.log(markup);
       return markup;
+    },
+    registerHandlebarHelpers: function(){
+
+      Handlebars.registerHelper('assetPath', function(options) {
+        console.log(Vussion.settings)
+
+        var html = Vussion.settings.pathToAssets + options.fn(this);
+        return html;
+      });
+
     },
     changeSection: function(section){
       //requires Vussion.state.current.section to be updated

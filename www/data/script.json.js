@@ -45,13 +45,13 @@ var ExternalData = {
 		"type": "video",
 		"video":[{
 			"name": "demo-720p-christian-micheal.mp4",
-			"file": "/_assets/videos/demo-720p-christian-micheal.mp4"
+			"file": "data/videos/demo-720p-christian-micheal.mp4"
 			},{
 			"name": "demo-720p-gopro.mp4",
-			"file": "/_assets/videos/demo-720p-gopro.mp4"
+			"file": "data/videos/demo-720p-gopro.mp4"
 			},{
 			"name": "demo-720p-horses.mp4",
-			"file": "/_assets/videos/demo-720p-horses.mp4"
+			"file": "data/videos/demo-720p-horses.mp4"
 			}
 		]
 	},{
@@ -60,13 +60,13 @@ var ExternalData = {
 		"type": "video",
 		"video":[{
 			"name": "demo-720p-christian-micheal.mp4",
-			"file": "/_assets/videos/demo-720p-christian-micheal.mp4"
+			"file": "data/videos/demo-720p-christian-micheal.mp4"
 			},{
 			"name": "demo-720p-gopro.mp4",
-			"file": "/_assets/videos/demo-720p-gopro.mp4"
+			"file": "data/videos/demo-720p-gopro.mp4"
 			},{
 			"name": "demo-720p-horses.mp4",
-			"file": "/_assets/videos/demo-720p-horses.mp4"
+			"file": "data/videos/demo-720p-horses.mp4"
 			}
 		]
 	},{

@@ -27,12 +27,19 @@
         <title>Vussion</title>
 
         <script src="data/script.json.js"></script>
-        <script src="_assets/js/all.js"></script>
-        <link rel="stylesheet" href="_assets/css/bootstrap.css">
-        <link rel="stylesheet" href="_assets/css/slick.css">
-        <link rel="stylesheet" href="_assets/css/style.css">    
-        <link rel="stylesheet" href="_assets/css/video-js.min.css">
+        <script src="_assets/plugins/jquery/jquery-1.11.1.js"></script>
+        <script src="_assets/plugins/underscore/underscore.js"></script>
+        <script src="_assets/plugins/bootstrap/bootstrap.js"></script>
+        <script src="_assets/plugins/handlebars/handlebars-v2.0.0.js"></script>
+        <script src="_assets/plugins/socket.io/socket.io-1.2.0.js"></script>
+        <script src="_assets/plugins/superslides/jquery.superslides.js"></script>
+        <script src="_assets/plugins/video.js/video.dev.js"></script>
 
+        <link rel="stylesheet" href="_assets/css/bootstrap.css">
+        <link rel="stylesheet" href="_assets/plugins/superslides/stylesheets/superslides.css ">
+        
+        <link rel="stylesheet" href="_assets/css/video-js.min.css">
+        <link rel="stylesheet" href="_assets/css/style.css">   
     </head>
     <body>
         
@@ -45,23 +52,23 @@
     </script>
     
     <div class="view">
-      <a id="menu-module" data-toggle="modal" data-target="#application-menu" class="btn btn-primary pull-right" >Menu</a>
-      <div>
+      <a id="menu-module" data-toggle="modal" data-target="#application-menu" class="btn btn-primary pull-right" ></a>
+      <div class="section-container">
 
-        <section id="loading" class="active">
+        <section id="loading" class="">
           <div class="col-md-12 text-center">
               <img src="_assets/images/loading-icon.gif" />
               <p>Please Hold</p>
           </div>
         </section>
 
-        <section id="slider" class="slider-wrapper">              
+        <section id="slider" class="slider-wrapper">          
         </section>
 
         <section id="html" class="html-wrapper">
         </section>
 
-        <section id="video" class="video-wrapper">
+        <section id="video" class="video-wrapper active">
         </section> 
     </div>
   </div>
@@ -110,10 +117,12 @@
   </div><!-- /.modal -->
 
 <script id="slide-template" type="text/x-handlebars-template">
-  <div id="slick-slider">
-  {{#each slides}}
-    <div><img src="{{#assetPath}}{{media}}{{/assetPath}}"/></div>
-  {{/each}}
+  <div id="slider-container" class="slides">
+    <div class="slides-container">
+    {{#each slides}}
+      <img src="{{#assetPath}}{{media}}{{/assetPath}}" width="1024" height="768"/>
+    {{/each}}
+    </div>
   </div>
 </script> 
 
@@ -153,7 +162,7 @@
 </script>
 
 <script id="video-template" type="text/x-handlebars-template">
-  <video id="player{{id}}" class="video-js vjs-default-skin" width="1280" height="720">
+  <video id="player-{{videoPlayerID}}" class="video-js vjs-default-skin" width="1280" height="720">
   </video>
 </script>
 

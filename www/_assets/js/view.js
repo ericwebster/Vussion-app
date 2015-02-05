@@ -5,37 +5,6 @@
     -  when changing sections, presentations are reset. dont know if thats good.
   */
 
-  function merge(target, source) {
-    /* Merges two (or more) objects,
-     giving the last one precedence */
-    if ( typeof target !== 'object' ) {
-      target = {};
-    }
-    for (var property in source) {
-      if ( source.hasOwnProperty(property) ) {
-          var sourceProperty = source[ property ];
-          if ( typeof sourceProperty === 'object' ) {
-              target[ property ] = util.merge( target[ property ], sourceProperty );
-              continue;
-          }
-          target[ property ] = sourceProperty;
-      }
-    }
-    for (var a = 2, l = arguments.length; a < l; a++) {
-      merge(target, arguments[a]);
-    }
-    return target;
-  }
-
-  function randomString(length, chars) {
-    var result = '',
-    length = 12,
-    chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-
-    for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
-    return result;
-  }
-
 
   //remote-presetaton
   var Vussion = {
@@ -99,7 +68,7 @@
             Vussion.state.current = res;
             Vussion.cleanupGarbage(function(){
               Vussion.changeSection(res.section);
-            } 
+            });
           }
 
         });
@@ -188,7 +157,7 @@
           Vussion.vidplayer.tech.removeTriggers();        
           Vussion.vidplayer.load();                       
         }                                                         
-
+        $("video").remove();
         // remove the entire Vussion.vidplayer from the dom
         $(Vussion.vidplayer.el).remove();  
 
@@ -199,6 +168,7 @@
     },
     changeSection: function(section){
       //requires Vussion.state.current.section to be updated
+      console.log(section);
       $("section").removeClass("active");
 
       switch (section.type) {
@@ -211,8 +181,7 @@
             $("section#" + section.type).addClass("active");
             
             $("#slider-container").superslides({
-              play: 0,
-              animation: "fade"
+              play: 0
             }); 
 
             if(Vussion.state.current.slide){

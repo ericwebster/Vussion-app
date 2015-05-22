@@ -9,4 +9,6 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <preference name="AllowInlineMediaPlayback" value="true"/>
+    <preference name="Fullscreen" value="true" />
 </widget>

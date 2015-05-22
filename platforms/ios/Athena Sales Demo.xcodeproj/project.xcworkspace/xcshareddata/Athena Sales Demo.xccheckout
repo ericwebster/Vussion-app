@@ -5,9 +5,9 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>F1FD1E30-C822-40AB-9C0D-50CA8A16F2C4</string>
+	<string>FAE79B4C-BF3F-444C-AA85-DA2C77484CD6</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Vussion</string>
+	<string>Athena Sales Demo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1E3FA68C88AF957DB852AE296C139807D99FC832</key>
@@ -16,7 +16,7 @@
 		<string>https://github.com/ericwebster/Vussion-app.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>platforms/ios/Vussion.xcodeproj</string>
+	<string>platforms/ios/Athena Sales Demo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1E3FA68C88AF957DB852AE296C139807D99FC832</key>
@@ -36,6 +36,14 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1F0C96B64AC2A9FCAD229CD3E9A44BE1FA144477</string>
+			<key>IDESourceControlWCCName</key>
+			<string>athena-vussion-app</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>1E3FA68C88AF957DB852AE296C139807D99FC832</string>
 			<key>IDESourceControlWCCName</key>
 			<string>cordova-js</string>
@@ -44,9 +52,9 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1F0C96B64AC2A9FCAD229CD3E9A44BE1FA144477</string>
+			<string>1E3FA68C88AF957DB852AE296C139807D99FC832</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Vussion-app</string>
+			<string>cordova-js</string>
 		</dict>
 	</array>
 </dict>

@@ -60,7 +60,7 @@
         <section id="loading" class="active">
           <div class="col-md-12 text-center">
               <img src="_assets/images/loading-icon.gif" />
-              <p>Please Hold</p>
+              <p>Please Hold 7.3</p>
           </div>
         </section>
 
@@ -175,7 +175,7 @@
       <script type="text/javascript">
         $(document).ready(function(){
           $("#user-slider").superslides({
-              play: 5000,
+              play: 10000,
               animation: "fade"
             }); 
           document.ontouchmove = function(e) {
@@ -207,7 +207,7 @@
 
     <script id="video-template" type="text/x-handlebars-template">
     <div class="content">
-      <video id="player-{{videoPlayerID}}" class="video-js vjs-default-skin" width="1024" height="768">
+      <video poster="{{placeholder}}" id="player-{{videoPlayerID}}" class="video-js vjs-default-skin" webkit-playsinline width="1024" height="768">
       </video>
     </div>
     </script>

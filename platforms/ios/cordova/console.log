@@ -1154,3 +1154,55 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 
 2015-02-05 09:42:20.802 Vussion[73568:845637] Resetting plugins due to page load.
 2015-02-05 09:42:21.121 Vussion[73568:845637] Finished load of: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/FC114189-D9E8-41C5-95B8-47DFC72011FF/data/Containers/Bundle/Application/FA1FCD45-6989-4E53-ACA6-86CC51B1D32E/Vussion.app/www/index.html
+2015-02-05 14:38:45.369 Vussion[85876:910903] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-05 14:38:45.380 Vussion[85876:910903] Multi-tasking -> Device: YES, App: YES
+2015-02-05 14:38:45.454 Vussion[85876:910903] Unlimited access to network resources
+2015-02-05 14:38:45.493 Vussion[85876:910903] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-05 14:38:47.237 Vussion[85876:910903] Resetting plugins due to page load.
+2015-02-05 14:38:48.177 Vussion[85876:910903] Finished load of: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/FC114189-D9E8-41C5-95B8-47DFC72011FF/data/Containers/Bundle/Application/2A2AA21F-FC8B-4F4B-ADE8-C9749E063031/Vussion.app/www/index.html
+2015-02-05 16:16:38.919 Vussion[95857:952333] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-05 16:16:38.944 Vussion[95857:952333] Multi-tasking -> Device: YES, App: YES
+2015-02-05 16:16:38.999 Vussion[95857:952333] Unlimited access to network resources
+2015-02-05 16:16:39.027 Vussion[95857:952333] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-05 16:16:41.051 Vussion[95857:952333] Resetting plugins due to page load.
+2015-02-05 16:16:42.011 Vussion[95857:952333] Finished load of: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/FC114189-D9E8-41C5-95B8-47DFC72011FF/data/Containers/Bundle/Application/74EE71F2-34F4-4175-A2DB-172E014D0EDE/Vussion.app/www/index.html
+2015-02-06 06:04:23.300 Vussion[5085:994709] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-06 06:04:23.307 Vussion[5085:994709] Multi-tasking -> Device: YES, App: YES
+2015-02-06 06:04:23.356 Vussion[5085:994709] Unlimited access to network resources
+2015-02-06 06:04:23.381 Vussion[5085:994709] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-06 06:04:25.524 Vussion[5085:994709] Resetting plugins due to page load.
+2015-02-06 06:04:26.880 Vussion[5085:994709] Finished load of: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/FC114189-D9E8-41C5-95B8-47DFC72011FF/data/Containers/Bundle/Application/86214FC5-2FA7-425A-94D8-C1219FEB59D1/Vussion.app/www/index.html
+2015-02-06 06:13:39.343 Vussion[7512:1001495] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-06 06:13:39.375 Vussion[7512:1001495] Multi-tasking -> Device: YES, App: YES
+2015-02-06 06:13:39.394 Vussion[7512:1001495] Unlimited access to network resources
+2015-02-06 06:13:39.409 Vussion[7512:1001495] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-02-06 06:13:39.893 Vussion[7512:1001495] Resetting plugins due to page load.
+2015-02-06 06:13:40.521 Vussion[7512:1001495] Finished load of: file:///Users/ewebster/Library/Developer/CoreSimulator/Devices/BD48F0BC-8961-42A1-811E-8F3E55DD8C74/data/Containers/Bundle/Application/D1F8C9CC-0DDC-4A14-ADC4-7762BFF58B9D/Vussion.app/www/index.html

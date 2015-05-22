@@ -26,19 +26,23 @@ var ExternalData = {
 	},{
 		"name": "Product Presentation > Check In: Admin POV",
 		"id": "4",
+		"placeholder" : "data/Sit_Slides/product-pres-sit.jpg",
 		"type": "video",
 		"video":[{
-			"file": "data/Product-Presentation/iPodClip1PatientConfirmation_iPad Native Res 1024x768 athena.mp4", 
-			"name": "iPodClip1PatientConfirmation"
+			"file": "data/Product-Presentation/iPad-1-Phone-Text.mp4", 
+			"name": "iPad-1-Phone-Text"
 		},{
-			"file": "data/Product-Presentation/iPodClip2GroupNumber_iPad Native Res 1024x768 athena.mp4", 
-			"name": "iPodClip2GroupNumber"
+			"file": "data/Product-Presentation/iPad-2-Patient-Confirmation.mp4", 
+			"name": "iPad-2-Patient-Confirmation"
 		},{
-			"file": "data/Product-Presentation/iPodClip3CreditCardPayment_iPad Native Res 1024x768 athena.mp4", 
-			"name": "iPodClip3CreditCardPayment"
+			"file": "data/Product-Presentation/iPad-3-Group-Number.mp4", 
+			"name": "iPad-3-Group-Number"
 		},{
-			"file": "data/Product-Presentation/iPodClip4Commonwell_iPad Native Res 1024x768 athena.mp4", 
-			"name": "iPodClip4Commonwell"
+			"file": "data/Product-Presentation/iPad-4-Credit-Card-Payment.mp4", 
+			"name": "iPad-4-Credit-Card-Payment"
+		},{
+			"file": "data/Product-Presentation/iPad-5-Commonwell.mp4", 
+			"name": "iPad-5-Commonwell"
 		}]
 	},{
 		"name": "Self Diven Demos",
@@ -51,7 +55,7 @@ var ExternalData = {
 		"id": "6",
 		"type": "html",
 		"template": "html-template-basic",
-		"html": "<img src='data/Sit_Slides/athena-live-qa-ipad-sit.jpg' />"
+		"html": "<img src='data/Sit_Slides/live-demo-sit.jpg' />"
 	}]
 };
 

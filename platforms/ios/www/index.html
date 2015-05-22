@@ -175,7 +175,7 @@
       <script type="text/javascript">
         $(document).ready(function(){
           $("#user-slider").superslides({
-              play: 5000,
+              play: 10000,
               animation: "fade"
             }); 
           document.ontouchmove = function(e) {
@@ -207,7 +207,7 @@
 
     <script id="video-template" type="text/x-handlebars-template">
     <div class="content">
-      <video id="player-{{videoPlayerID}}" class="video-js vjs-default-skin" width="1024" height="768">
+      <video poster="{{placeholder}}" id="player-{{videoPlayerID}}" class="video-js vjs-default-skin" width="1024" height="768">
       </video>
     </div>
     </script>

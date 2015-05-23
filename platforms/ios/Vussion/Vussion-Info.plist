@@ -61,7 +61,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>7.3</string>
+	<string>7.4</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchImages</key>
@@ -167,7 +167,7 @@
 			<string>{768, 1024}</string>
 		</dict>
 	</array>
-	<key>UIStatusBarHidden</key>
+	<key>UIStatusBarHidden~ipad</key>
 	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

@@ -22,6 +22,7 @@
     },
     init: function(settings){
       this.debugLog('init');
+
       merge(Vussion.settings, settings);
       $("#loading p").text("Connecting to Server ..")
       this.data = ExternalData;
@@ -33,85 +34,98 @@
         this.debugLog("no local settings");
       }
       this.debugLog("connecting.." + "http://"+ this.settings.server + ":" + this.settings.port);
-      this.socket = io("http://"+ this.settings.server + ":" + this.settings.port);
+      Vussion.socket = io("http://"+ this.settings.server + ":" + this.settings.port);
+      this.debugLog(this.socket);
       this.registerHandlebarHelpers();
       this.bindEvents();
     },
     bindEvents: function(){
-      Vussion.socket.on('connect', function(){
-
-        Vussion.debugLog("socket.on >> we're connected captain, engage");
+      this.debugLog("bind events")
+      this.socket.on('connect', function(){
+        this.serverConnected();
+        this.debugLog("socket.on >> we're connected captain, engage");
 
         //have the client machine request the current state of the presentation
-        Vussion.debugLog("socket.on >> requested state");
-        Vussion.socket.emit("request state");
+        this.debugLog("socket.on >> requested state");
+        this.socket.emit("request state");
 
 
         //this should trigger a current state emit from the server
-        Vussion.socket.on('current state', function(res){
-          Vussion.debugLog("socket.on >> loading current state");
-          Vussion.debugLog(res);
-          Vussion.state.current = res;
-          Vussion.changeSection(res.section); 
+        this.socket.on('current state', function(res){
+          this.debugLog("socket.on >> loading current state");
+          this.debugLog(res);
+          this.state.current = res;
+          this.changeSection(res.section); 
         })
 
 
         //this is the main section change update, possibly rename todo:
-        Vussion.socket.on('update', function(res){
-          Vussion.debugLog("socket.on >> update")
+        this.socket.on('update', function(res){
+          this.debugLog("socket.on >> update")
 
-          if(res.section.id != Vussion.state.current.section.id){
+          if(res.section.id != this.state.current.section.id){
             //section has changed
-            Vussion.debugLog("socket.on >> section change");
-            Vussion.debugLog(res);
+            this.debugLog("socket.on >> section change");
+            this.debugLog(res);
 
-            Vussion.state.current = res;
-            Vussion.cleanupGarbage(function(){
-              Vussion.changeSection(res.section);
+            this.state.current = res;
+            this.cleanupGarbage(function(){
+              this.changeSection(res.section);
             });
           }
 
         });
 
 
-        Vussion.socket.on('change slide', function(slide){
-          Vussion.debugLog("socket.on >> slide change");
-          Vussion.debugLog("new slide >> " + slide);
+        this.socket.on('change slide', function(slide){
+          this.debugLog("socket.on >> slide change");
+          this.debugLog("new slide >> " + slide);
           //todo: check if current slide is the one being animated to
-          Vussion.changeSlide(slide);
+          this.changeSlide(slide);
           
         }); 
 
 
-        Vussion.socket.on('change video', function(state){
+        this.socket.on('change video', function(state){
 
-            Vussion.debugLog("video change");
-            Vussion.state.current.video = state.video;
-            Vussion.playVideo();
+            this.debugLog("video change");
+            this.state.current.video = state.video;
+            this.playVideo();
         }); 
       })
-      Vussion.socket.on('error', function(err){
-        Vussion.debugLog("socket.on >> Oh-oh error on io.connect");
-        Vussion.debugLog("Settings >>");
-        Vussion.debugLog(Vussion.settings);
-        Vussion.debugLog("Err OBJ >>");
-        Vussion.debugLog(err);
+      this.socket.on('connect_error', function(err){
+        this.debugLog("socket.on >> Oh-oh error on io.connect");
+        this.debugLog("Settings >>");
+        this.debugLog(this.settings);
+        this.debugLog("Err OBJ >>");
+        this.debugLog(err);
+      })
+      this.socket.on('error', function(err){
+        this.debugLog("socket.on >> Oh-oh error on io.connect");
+        this.debugLog("Settings >>");
+        this.debugLog(this.settings);
+        this.debugLog("Err OBJ >>");
+        this.debugLog(err);
       })
 
       //this is the bind for the settings form, on submit it writes to localStorage
       $("#settings-form").submit(function(){
-        Vussion.debugLog("bind form");
-        Vussion.settings.server = $("#serverAddress").val();
-        Vussion.settings.port = $("#serverPort").val();
-        Vussion.writeSettingsToLocalStorage();
+        this.debugLog("bind form");
+        this.settings.server = $("#serverAddress").val();
+        this.settings.port = $("#serverPort").val();
+        this.writeSettingsToLocalStorage();
         return false;
       })
       
     },
+    serverConnected: function(){
+      this.debugLog("connected to server");
+      $("#loading p").html("Connected, awaiting state");
+    },
     playVideo: function(){
-      Vussion.debugLog("change video file & play");
-      console.log(Vussion.state.current.video);
-      Vussion.vidplayer.src(Vussion.state.current.video).play();
+      this.debugLog("change video file & play");
+      console.log(this.state.current.video);
+      this.vidplayer.src(Vussion.state.current.video).play();
     },
     getCurrentState: function(){
       Vussion.debugLog("getting current state");
@@ -132,7 +146,7 @@
     },
     debugLog: function(message){
       console.log(message);
-      $('#debugger ul').append($('<li>').text(message));
+      $('#debugger ul').append($('<li>').text(message.toString()));
     },
     compileTemplate: function(templateID, data){
       var source   = $(templateID).html();
@@ -168,7 +182,6 @@
     },
     changeSection: function(section){
       //requires Vussion.state.current.section to be updated
-      console.log(section);
       $("section").removeClass("active");
 
       switch (section.type) {

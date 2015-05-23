@@ -10,7 +10,12 @@ body{
 header {
   padding-bottom: 10px; 
 }
-
+#version{
+  color:#8b4ec4;
+  position: absolute;
+  left:0;
+  bottom:0;
+}
 #menu-module {
   position: absolute;
   top: 10px;
@@ -20,6 +25,23 @@ header {
   border: none;
   overflow: hidden;
   z-index: 3000; 
+}
+#debugger{
+  height:300px;
+  overflow:scroll;
+  font-family: monospace;
+  font-size: 10px;
+}
+#debugger ul{
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+#debugger li{
+  color: #000;
+  border-left: 2px solid #eee;
+  margin-bottom: 4px;
+  padding-left: 5px;
 }
 section {
   display: none; 
